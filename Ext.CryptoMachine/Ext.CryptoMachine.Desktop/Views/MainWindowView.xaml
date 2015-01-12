@@ -1,0 +1,75 @@
+﻿<Window x:Class="Ext.CryptoMachine.Desktop.Views.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindowView" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="0">
+            <DockPanel>
+                <Grid Margin="10,5" DockPanel.Dock="Top">
+                    <TextBlock>
+                        <TextBlock.Text>Wynik</TextBlock.Text>
+                    </TextBlock>
+                </Grid>
+                <Grid Margin="10,5,10,0" DockPanel.Dock="Top" Height="300">
+                    <TextBox x:Name="ResultText" VerticalScrollBarVisibility="Auto"/>
+                </Grid>
+                <Grid Margin="10,5,10,0" DockPanel.Dock="Top">
+                    <TextBlock Text="Działania" />
+                </Grid>
+                <Grid Margin="10,5,10,10">
+                    <DockPanel>
+                        <Grid DockPanel.Dock="Top">
+                            <StackPanel>
+                                <Grid Margin="0, 5, 10, 0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="ReadFile" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 5, 10, 5" Content="Załaduj plik" />
+                                        <Button x:Name="DownloadResult" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 5, 10, 5" Content="Pobierz wynik"/>
+                                        <Button Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 5, 10, 5" Content="Test" Visibility="Hidden"/>
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Margin="0, 5, 10, 0">
+                                    <DockPanel>
+                                        <Button x:Name="Browse" Content="Przeglądaj" Margin="10,0,10,0" />
+                                        <Border BorderBrush="Gray" BorderThickness="1">
+                                            <TextBox x:Name="FilePath" Text="Ścieżka do pliku.." />
+                                        </Border>
+                                    </DockPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </DockPanel>
+                </Grid>
+            </DockPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <DockPanel Margin="10">
+                <Grid DockPanel.Dock="Top" Margin="5, 10, 5, 0">
+                    <StackPanel>
+                        <Grid>
+                            <TextBlock Text="Wybór algorytmu" />
+                        </Grid>
+                        <Grid Margin="0, 5, 0, 0">
+                            <ComboBox x:Name="Algorithms" />
+                        </Grid>
+                        
+                    </StackPanel>
+                </Grid>
+                <Grid DockPanel.Dock="Top" Margin="5, 10, 5, 0">
+                    <Grid Margin="0, 5, 0, 0">
+                        <Button x:Name="ProcessAlgorithm" Content="Wykonaj" Height="50"/>
+                    </Grid>
+                </Grid>
+                <Grid>
+                    
+                </Grid>
+            </DockPanel>
+        </Grid>
+
+    </Grid>
+</Window>
