@@ -8,6 +8,7 @@ namespace Ext.CryptoMachine.Cryptography.Cesar
     {
         public Operation Operation { get; set; }
         public String Input { get; set; }
+        public int Move { get; set; }
 
         public static CesarAlgorithmInput GetInput(IEnumerable<String> fileContent)
         {
@@ -17,10 +18,13 @@ namespace Ext.CryptoMachine.Cryptography.Cesar
 
             var content = data[1];
 
+            var moveNumber = data[2];
+
             return new CesarAlgorithmInput
             {
                 Operation = operation,
-                Input = content
+                Input = content,
+                Move = Int32.Parse(moveNumber)
             };
         }
 

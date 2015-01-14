@@ -30,17 +30,19 @@ namespace Ext.CryptoMachine.Cryptography.Cesar
 
             var array = ttext.ToCharArray();
 
+            var result =
+                    array
+                        .Select(
+                            ch => ch - 'A')
+                        .Select(
+                            nn => (nn - input.Move)%26)
+                        .Aggregate(
+                            String.Empty,
+                            (current, nn) => current + (char) (nn + 'A')) + Environment.NewLine;
 
             return new CesarAlgorithmOutput
             {
-                Result =
-                    array.Select(
-                            ch => ch - 'A')
-                         .Select(
-                            nn => (nn - 3)%26)
-                         .Aggregate(
-                            String.Empty,
-                            (current, nn) => current + (char) (nn + 'A'))
+                Result = result
             };
         }
 
@@ -50,17 +52,24 @@ namespace Ext.CryptoMachine.Cryptography.Cesar
 
             var array = ttext.ToCharArray();
 
+            var result = "decrypt" + Environment.NewLine;
+
+            result +=
+                    array
+                        .Select(
+                            ch => ch - 'A')
+                        .Select(
+                            nn => (nn + input.Move)%26)
+                        .Aggregate(
+                            String.Empty,
+                            (current, nn) => current + (char) (nn + 'A')) + Environment.NewLine;
+
+            result += input.Move;
 
             return new CesarAlgorithmOutput
             {
-                Result =
-                    array.Select(
-                            ch => ch - 'A')
-                         .Select(
-                            nn => (nn + 3) % 26)
-                         .Aggregate(
-                            String.Empty,
-                            (current, nn) => current + (char)(nn + 'A'))
+                Result = result
+                    
             };
         }
     }

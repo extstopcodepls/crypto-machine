@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +47,26 @@
     <Compile Include="Cesar\CesarCryptoAlgorithm.cs" />
     <Compile Include="IAlgorithmInput.cs" />
     <Compile Include="IAlgorithmOutput.cs" />
+    <Compile Include="IbanValidator\IbanAlgorithmInput.cs" />
+    <Compile Include="IbanValidator\IbanAlgorithmOutput.cs" />
+    <Compile Include="IbanValidator\IbanCryptoAlgorithm.cs" />
     <Compile Include="ICryptoAlgorithm.cs" />
     <Compile Include="Matrix\MatrixAlgorithmInput.cs" />
     <Compile Include="Matrix\MatrixAlgorithmOutput.cs" />
     <Compile Include="Matrix\MatrixCryptoAlgorithm.cs" />
+    <Compile Include="NipValidatior\NipAlgorithmInput.cs" />
+    <Compile Include="NipValidatior\NipAlgorithmOutput.cs" />
+    <Compile Include="NipValidatior\NipCryptoAlgorithm.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cesar\decrypt.txt" />
+    <Content Include="Cesar\encrypt.txt" />
+    <Content Include="IbanValidator\iban.txt" />
+    <Content Include="Matrix\decrypt.txt" />
+    <Content Include="Matrix\encrypt.txt" />
+    <Content Include="NipValidatior\nip.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

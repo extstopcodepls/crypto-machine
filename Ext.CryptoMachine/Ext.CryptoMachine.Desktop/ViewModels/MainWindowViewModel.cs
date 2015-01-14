@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using System.Windows.Documents;
 using Caliburn.Micro;
 using Ext.CryptoMachine.Cryptography;
-using Ext.CryptoMachine.Cryptography.Cesar;
 using Microsoft.Win32;
 
 namespace Ext.CryptoMachine.Desktop.ViewModels
