@@ -30,12 +30,12 @@ namespace Ext.CryptoMachine.Cryptography.NipValidatior
 
             var wagi = new[] {6, 5, 7, 2, 3, 4, 5, 6, 7, 0};
             var suma =
-                array
-                    .Zip(
-                        wagi,
-                        (cyfra, waga) =>
-                            cyfra*waga)
-                    .Sum();
+                    array
+                        .Zip(
+                            wagi,
+                            (cyfra, waga) =>
+                                cyfra*waga)
+                        .Sum();
 
             return new NipAlgorithmOutput
             {
