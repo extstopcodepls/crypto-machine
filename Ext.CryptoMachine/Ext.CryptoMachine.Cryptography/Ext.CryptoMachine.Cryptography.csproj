@@ -54,6 +54,9 @@
     <Compile Include="Matrix\MatrixAlgorithmInput.cs" />
     <Compile Include="Matrix\MatrixAlgorithmOutput.cs" />
     <Compile Include="Matrix\MatrixCryptoAlgorithm.cs" />
+    <Compile Include="Midnight\MidnightAlgorithmInput.cs" />
+    <Compile Include="Midnight\MidnightAlgorithmOutput.cs" />
+    <Compile Include="Midnight\MidnightCryptoAlgorithm.cs" />
     <Compile Include="NipValidatior\NipAlgorithmInput.cs" />
     <Compile Include="NipValidatior\NipAlgorithmOutput.cs" />
     <Compile Include="NipValidatior\NipCryptoAlgorithm.cs" />
@@ -66,6 +69,8 @@
     <Content Include="IbanValidator\iban.txt" />
     <Content Include="Matrix\decrypt.txt" />
     <Content Include="Matrix\encrypt.txt" />
+    <Content Include="Midnight\decrypt.txt" />
+    <Content Include="Midnight\encrypt.txt" />
     <Content Include="NipValidatior\nip.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
