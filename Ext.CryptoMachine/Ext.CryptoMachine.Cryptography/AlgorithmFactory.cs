@@ -5,6 +5,7 @@ using Ext.CryptoMachine.Cryptography.IbanValidator;
 using Ext.CryptoMachine.Cryptography.Matrix;
 using Ext.CryptoMachine.Cryptography.Midnight;
 using Ext.CryptoMachine.Cryptography.NipValidatior;
+using Ext.CryptoMachine.Cryptography.Vinegre;
 
 namespace Ext.CryptoMachine.Cryptography
 {
@@ -18,8 +19,8 @@ namespace Ext.CryptoMachine.Cryptography
                 {AlgoritmType.Midnight, new MidnightCryptoAlgorithm()},
                 {AlgoritmType.Matrix, new MatrixCryptoAlgorithm()},
                 {AlgoritmType.Nip, new NipCryptoAlgorithm()},
-                {AlgoritmType.Iban, new IbanCryptoAlgorithm()}
-
+                {AlgoritmType.Iban, new IbanCryptoAlgorithm()},
+                {AlgoritmType.Vinegre, new VinegreCryptoAlgorithm()}
             };
         }
         public static Dictionary<string, ICryptoAlgorithm> Algorithms { get; set; }
@@ -35,7 +36,8 @@ namespace Ext.CryptoMachine.Cryptography
                 {typeof (MidnightCryptoAlgorithm), MidnightAlgorithmInput.GetInput},
                 {typeof (NipCryptoAlgorithm), NipAlgorithmInput.GetInput},
                 {typeof (IbanCryptoAlgorithm), IbanAlgorithmInput.GetInput},
-                {typeof (MatrixCryptoAlgorithm), MatrixAlgorithmInput.GetInput}
+                {typeof (MatrixCryptoAlgorithm), MatrixAlgorithmInput.GetInput},
+                {typeof (VinegreCryptoAlgorithm), VinegreAlgorithmInput.GetInput}
             };
         }
         public static Dictionary<Type, Func<IEnumerable<String>, IAlgorithmInput>> InputTypes { get; set; }
@@ -46,6 +48,7 @@ namespace Ext.CryptoMachine.Cryptography
         public static string Cesar = "Cesar";
         public static string Midnight = "Midnight";
         public static string Matrix = "Macierzowo";
+        public static string Vinegre = "Szyfr Vigenère'a";
         public static string Nip = "Walidacja Nr Nip";
         public static string Iban = "Walidacja Nr IBAN";
     }

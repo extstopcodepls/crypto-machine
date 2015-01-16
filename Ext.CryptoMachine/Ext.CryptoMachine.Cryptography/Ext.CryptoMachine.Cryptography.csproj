@@ -62,6 +62,9 @@
     <Compile Include="NipValidatior\NipCryptoAlgorithm.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vinegre\VinegreAlgorithmInput.cs" />
+    <Compile Include="Vinegre\VinegreAlgorithmOutput.cs" />
+    <Compile Include="Vinegre\VinegreCryptoAlgorithm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cesar\decrypt.txt" />
@@ -72,6 +75,8 @@
     <Content Include="Midnight\decrypt.txt" />
     <Content Include="Midnight\encrypt.txt" />
     <Content Include="NipValidatior\nip.txt" />
+    <Content Include="Vinegre\decrypt.txt" />
+    <Content Include="Vinegre\encrypt.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
